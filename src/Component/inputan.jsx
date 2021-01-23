@@ -14,7 +14,7 @@ class inputan extends Component {
         };
       }
     
-      onChangeEmail = (nilai) => {
+      onChangeesay = (nilai) => {
         this.setState({ nilai: nilai.target.value });
         console.log(this.nilai);
       };
@@ -26,7 +26,7 @@ render() {
                  
                  if (detail.type == "radio") {
                    
-                    return <div>{detail.soal}<br /><input type={detail.type} className={detail.a} checked />{detail.a}<input type={detail.type} className={detail.c} />{detail.c}<br /><input type={detail.type} className={detail.b} />{detail.b}<input type={detail.type} className={detail.d} />{detail.d}</div>
+                    return <h5>{index+1}. {detail.soal}<br /><input type={detail.type} className={detail.a} checked />{detail.a}<input type={detail.type} className={detail.c} />{detail.c}<br /><input type={detail.type} className={detail.b} />{detail.b}<input type={detail.type} className={detail.d} />{detail.d}</h5>
                  }
                  if (detail.type == "checkbox") {
                     // console.log(detail.jawab[0]);
@@ -41,12 +41,12 @@ render() {
                      else{
                         statusCss = "";
                      }
-                    return <div>{detail.soal}<br /><input type={detail.type} className={detail.option[0]}  checked  />{detail.option[0]}<br /><input type={detail.type} className={detail.option[1]} checked/>{detail.option[1]}<br /><input type={detail.type} className={detail.option[2]} />{detail.option[2]}</div>
+                    return <h5>{index+1}. {detail.soal}<br /><input type={detail.type} className={detail.option[0]}  checked  />{detail.option[0]}<br /><input type={detail.type} className={detail.option[1]} checked/>{detail.option[1]}<br /><input type={detail.type} className={detail.option[2]} />{detail.option[2]}</h5>
                 }
                  else {
-                    return <h5>{detail.soal}<br /> 
+                    return <h5>{index+1}. {detail.soal}<br /> 
                    
-                    <textarea id="w3review" className="w3review" rows="4" cols="50"     onChange={this.onChangeEmail} /> 
+                    <textarea id="w3review" className="w3review" rows="4" cols="50"     onChange={this.onChangeesay} /> 
                     
                       </h5>
                  }
